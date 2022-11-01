@@ -1,0 +1,47 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+     int sum =0,sum1 ;  
+     int[] numbers = {1,1,2,3,4,1,4,4} ;
+     int max=0 ;
+     int min=numbers [0];
+     int num1 = 0,num2=0 ;
+     for (int i = 0; i < numbers.Length; i++) 
+     { sum = sum + numbers[i] ;
+ 
+     if (numbers[i]>max)
+     {  
+     max = numbers [i] ;
+    
+     }
+     if (numbers[i]<min) 
+     {
+     min = numbers [i] ;
+     }
+
+     }
+     for (int i = 0; i < numbers.Length; i++)
+     {
+// maxlarin sayi
+     if (max == numbers[i]) 
+     {
+      num1++ ;
+     }
+//minlarin sayi
+     if (min == numbers[i]) 
+     {
+     num2++ ;
+     }
+
+     }
+
+     sum1 = sum - num1*max - num2*min ;
+     Console.WriteLine ("min ve max olmadan digerlerinin cemi;"+sum1) ;
+    }
+}
